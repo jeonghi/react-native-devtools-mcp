@@ -48,14 +48,17 @@ Default MCP client configuration:
 {
   "mcpServers": {
     "rn-devtools": {
-      "command": "node",
-      "args": ["/absolute/path/to/rn-devtools-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "rn-devtools-mcp@latest"]
     }
   }
 }
 ```
 
-During development, use `tsx` entry directly:
+> [!NOTE]
+> Using `rn-devtools-mcp@latest` ensures your client always uses the latest published version.
+
+For local development, use the repository entry directly:
 
 ```json
 {
@@ -73,18 +76,18 @@ During development, use `tsx` entry directly:
 #### Codex
 
 ```bash
-codex mcp add rn-devtools -- npx tsx /absolute/path/to/rn-devtools-mcp/src/index.ts
+codex mcp add rn-devtools -- npx -y rn-devtools-mcp@latest
 ```
 
 #### Claude Code
 
 ```bash
-claude mcp add rn-devtools --scope user npx tsx /absolute/path/to/rn-devtools-mcp/src/index.ts
+claude mcp add rn-devtools --scope user npx -y rn-devtools-mcp@latest
 ```
 
 #### Cursor
 
-Configure MCP server command in `Cursor Settings -> MCP` using one of the JSON snippets above.
+Configure MCP server command in `Cursor Settings -> MCP` using the default JSON snippet above.
 
 ## Verification
 
