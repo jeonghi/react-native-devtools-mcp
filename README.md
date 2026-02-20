@@ -49,7 +49,7 @@ Default MCP client configuration:
   "mcpServers": {
     "rn-devtools": {
       "command": "node",
-      "args": ["/absolute/path/to/rn-devtools-mcp/dist/src/index.js"]
+      "args": ["/absolute/path/to/rn-devtools-mcp/dist/index.js"]
     }
   }
 }

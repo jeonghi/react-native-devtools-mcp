@@ -1,15 +1,16 @@
 {
   "name": "rn-devtools-mcp",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsup src/index.ts --format esm --platform node --target node20 --out-dir dist --clean",
     "test": "vitest run",
     "test:watch": "vitest",
     "dev": "tsx src/index.ts",
     "smoke": "tsx scripts/smoke.ts",
-    "docs:tools": "tsx scripts/generate-tools-docs.ts"
+    "docs:tools": "tsx scripts/generate-tools-docs.ts",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/node": "^22.13.5",
     "@types/ws": "^8.18.1",
+    "tsup": "^8.5.1",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
@@ -26,5 +28,23 @@
   "engines": {
     "node": ">=20"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "rn-devtools-mcp": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
