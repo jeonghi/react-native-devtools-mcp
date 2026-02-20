@@ -113,28 +113,91 @@ METRO_PORT_CANDIDATES=18081,18082 npm run smoke
 
 If you run into issues, check [Troubleshooting](./docs/troubleshooting.md).
 
-Core tools:
+The catalog below is auto-generated from `src/server/tools.ts`.
 
-- Target/session: `rn_list_targets`, `rn_connect`, `rn_disconnect`, `rn_reconnect`, `rn_session_status`
-- Runtime/debugger/network: `rn_eval`, `rn_debugger_enable`, `rn_pause`, `rn_resume`, `rn_step_over`, `rn_step_into`, `rn_step_out`, `rn_set_breakpoint_by_url`, `rn_network_enable`
-- Evidence retrieval: `rn_get_recent_console`, `rn_get_recent_network`, `rn_get_recent_exceptions`
-- Generic CDP passthrough: `rn_cdp_call`
+<!-- BEGIN AUTO GENERATED TOOLS -->
+- **Target & session** (5 tools)
+  - [`rn_list_targets`](docs/tool-reference.md#rn_list_targets)
+  - [`rn_connect`](docs/tool-reference.md#rn_connect)
+  - [`rn_disconnect`](docs/tool-reference.md#rn_disconnect)
+  - [`rn_reconnect`](docs/tool-reference.md#rn_reconnect)
+  - [`rn_session_status`](docs/tool-reference.md#rn_session_status)
+- **Runtime & debugger control** (8 tools)
+  - [`rn_eval`](docs/tool-reference.md#rn_eval)
+  - [`rn_debugger_enable`](docs/tool-reference.md#rn_debugger_enable)
+  - [`rn_pause`](docs/tool-reference.md#rn_pause)
+  - [`rn_resume`](docs/tool-reference.md#rn_resume)
+  - [`rn_step_over`](docs/tool-reference.md#rn_step_over)
+  - [`rn_step_into`](docs/tool-reference.md#rn_step_into)
+  - [`rn_step_out`](docs/tool-reference.md#rn_step_out)
+  - [`rn_set_breakpoint_by_url`](docs/tool-reference.md#rn_set_breakpoint_by_url)
+- **Network & evidence** (4 tools)
+  - [`rn_network_enable`](docs/tool-reference.md#rn_network_enable)
+  - [`rn_get_recent_console`](docs/tool-reference.md#rn_get_recent_console)
+  - [`rn_get_recent_network`](docs/tool-reference.md#rn_get_recent_network)
+  - [`rn_get_recent_exceptions`](docs/tool-reference.md#rn_get_recent_exceptions)
+- **Generic CDP** (1 tool)
+  - [`rn_cdp_call`](docs/tool-reference.md#rn_cdp_call)
 
-Alias families:
+- **CDP alias families**
+  - **Runtime aliases** (13 tools)
+    - [`rn_runtime_enable`](docs/tool-reference.md#rn_runtime_enable)
+    - [`rn_runtime_disable`](docs/tool-reference.md#rn_runtime_disable)
+    - [`rn_runtime_discard_console_entries`](docs/tool-reference.md#rn_runtime_discard_console_entries)
+    - [`rn_runtime_get_heap_usage`](docs/tool-reference.md#rn_runtime_get_heap_usage)
+    - [`rn_runtime_global_lexical_scope_names`](docs/tool-reference.md#rn_runtime_global_lexical_scope_names)
+    - [`rn_runtime_compile_script`](docs/tool-reference.md#rn_runtime_compile_script)
+    - [`rn_runtime_get_properties`](docs/tool-reference.md#rn_runtime_get_properties)
+    - [`rn_runtime_call_function_on`](docs/tool-reference.md#rn_runtime_call_function_on)
+    - [`rn_runtime_release_object`](docs/tool-reference.md#rn_runtime_release_object)
+    - [`rn_runtime_release_object_group`](docs/tool-reference.md#rn_runtime_release_object_group)
+    - [`rn_runtime_run_if_waiting_for_debugger`](docs/tool-reference.md#rn_runtime_run_if_waiting_for_debugger)
+    - [`rn_runtime_add_binding`](docs/tool-reference.md#rn_runtime_add_binding)
+    - [`rn_runtime_remove_binding`](docs/tool-reference.md#rn_runtime_remove_binding)
+  - **Debugger aliases** (9 tools)
+    - [`rn_debugger_disable`](docs/tool-reference.md#rn_debugger_disable)
+    - [`rn_debugger_set_blackboxed_ranges`](docs/tool-reference.md#rn_debugger_set_blackboxed_ranges)
+    - [`rn_debugger_set_blackbox_patterns`](docs/tool-reference.md#rn_debugger_set_blackbox_patterns)
+    - [`rn_debugger_set_pause_on_exceptions`](docs/tool-reference.md#rn_debugger_set_pause_on_exceptions)
+    - [`rn_debugger_evaluate_on_call_frame`](docs/tool-reference.md#rn_debugger_evaluate_on_call_frame)
+    - [`rn_debugger_set_breakpoint`](docs/tool-reference.md#rn_debugger_set_breakpoint)
+    - [`rn_debugger_remove_breakpoint`](docs/tool-reference.md#rn_debugger_remove_breakpoint)
+    - [`rn_debugger_set_breakpoints_active`](docs/tool-reference.md#rn_debugger_set_breakpoints_active)
+    - [`rn_debugger_set_instrumentation_breakpoint`](docs/tool-reference.md#rn_debugger_set_instrumentation_breakpoint)
+  - **Profiler aliases** (2 tools)
+    - [`rn_profiler_start`](docs/tool-reference.md#rn_profiler_start)
+    - [`rn_profiler_stop`](docs/tool-reference.md#rn_profiler_stop)
+  - **Heap profiler aliases** (8 tools)
+    - [`rn_heap_profiler_take_heap_snapshot`](docs/tool-reference.md#rn_heap_profiler_take_heap_snapshot)
+    - [`rn_heap_profiler_get_object_by_heap_object_id`](docs/tool-reference.md#rn_heap_profiler_get_object_by_heap_object_id)
+    - [`rn_heap_profiler_get_heap_object_id`](docs/tool-reference.md#rn_heap_profiler_get_heap_object_id)
+    - [`rn_heap_profiler_collect_garbage`](docs/tool-reference.md#rn_heap_profiler_collect_garbage)
+    - [`rn_heap_profiler_start_tracking_heap_objects`](docs/tool-reference.md#rn_heap_profiler_start_tracking_heap_objects)
+    - [`rn_heap_profiler_stop_tracking_heap_objects`](docs/tool-reference.md#rn_heap_profiler_stop_tracking_heap_objects)
+    - [`rn_heap_profiler_start_sampling`](docs/tool-reference.md#rn_heap_profiler_start_sampling)
+    - [`rn_heap_profiler_stop_sampling`](docs/tool-reference.md#rn_heap_profiler_stop_sampling)
+  - **Network aliases** (3 tools)
+    - [`rn_network_disable`](docs/tool-reference.md#rn_network_disable)
+    - [`rn_network_get_response_body`](docs/tool-reference.md#rn_network_get_response_body)
+    - [`rn_network_load_resource`](docs/tool-reference.md#rn_network_load_resource)
+  - **IO aliases** (2 tools)
+    - [`rn_io_read`](docs/tool-reference.md#rn_io_read)
+    - [`rn_io_close`](docs/tool-reference.md#rn_io_close)
+  - **Tracing aliases** (2 tools)
+    - [`rn_tracing_start`](docs/tool-reference.md#rn_tracing_start)
+    - [`rn_tracing_end`](docs/tool-reference.md#rn_tracing_end)
+  - **Log aliases** (2 tools)
+    - [`rn_log_enable`](docs/tool-reference.md#rn_log_enable)
+    - [`rn_log_disable`](docs/tool-reference.md#rn_log_disable)
+  - **Host aliases** (2 tools)
+    - [`rn_page_reload`](docs/tool-reference.md#rn_page_reload)
+    - [`rn_overlay_set_paused_in_debugger_message`](docs/tool-reference.md#rn_overlay_set_paused_in_debugger_message)
+  - **ReactNativeApplication aliases** (2 tools)
+    - [`rn_react_native_application_enable`](docs/tool-reference.md#rn_react_native_application_enable)
+    - [`rn_react_native_application_disable`](docs/tool-reference.md#rn_react_native_application_disable)
+<!-- END AUTO GENERATED TOOLS -->
 
-- `rn_runtime_*`
-- `rn_debugger_*`
-- `rn_profiler_*`
-- `rn_heap_profiler_*`
-- `rn_network_*`
-- `rn_io_*`
-- `rn_tracing_*`
-- `rn_log_*`
-- `rn_page_reload`
-- `rn_overlay_set_paused_in_debugger_message`
-- `rn_react_native_application_*`
-
-See full inputs and examples in [Tool Reference](./docs/tool-reference.md).
+See full inputs, behavior, and errors in [Tool Reference](./docs/tool-reference.md).
 
 ## Configuration
 
